@@ -1,0 +1,285 @@
+%
+%       All the information in the fields below should be changed for the thesis/dissertation.
+%       The fields here are used with fake information only as a guide.
+%       You may add or delete fields as needed.
+%       The Advisory Committee varies in size, so add members as needed.
+%
+%       updated copyright page - May 2010
+%
+\newcommand{\thesistitle}{A Laboratory Environment for Financial Markets}
+\newcommand{\thesisyear}{$2020$}
+\newcommand{\thesisname}{Thiago Winkler Alves}
+\newcommand{\thesischairadvisor}{Ionuț Florescu}    % this name prints on the title page as chairman and the abstract page as advisor
+\newcommand{\committeenameA}{George Calhoun}        % add or delete names as necessary
+\newcommand{\committeenameB}{Dragoș Bozdog}
+\newcommand{\committeenameC}{Emmanuel Hatzakis}
+\newcommand{\committeenameD}{Rupak Chatterjee}
+\newcommand{\thesisdepartment}{School of Business}
+\newcommand{\thesisdate}{August $31^{\text{st}}$, $2020$}
+\newcommand{\thesistype}{dissertation}
+\newcommand{\thesisdegree}{Doctor of Philosophy}
+\newcommand{\thesissigline}[1]{%
+    \leftline{\hbox to 2.5in{}\hrulefill}
+    \endgraf
+    \vspace*{-18pt}
+    \leftline{\hbox to 2.5in{}{#1}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%       Thesis / Dissertation title page
+%
+%       This template is set up initially for dissertations.
+%       The title page will have some modifications to it for a master thesis.
+%       Please read the comments below.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\thesistitlepage}{
+    \thispagestyle{empty}
+    \begin{center}
+        \begin{spacing}{2}
+            \MakeUppercase {\thesistitle} \\
+            by \\
+            \thesisname \\
+            A \MakeUppercase {\thesistype} \\[3mm]
+        \end{spacing}
+        \begin{spacing}{1}
+            Submitted to the Faculty of the Stevens Institute of Technology \\
+            in partial fulfillment of the requirements for the degree of \\[3mm]
+        \end{spacing}
+        \begin{spacing}{2}
+            \MakeUppercase {\thesisdegree}          % removed \\
+            \vspace{20mm}
+        \end{spacing}
+        % \strut \vfill
+        \mbox{ } \hfill \begin{minipage}{80mm}
+            \begin{spacing}{1}
+                \noindent \rule{3.1in}{0.1mm}
+                \thesisname, Candidate \\[3mm]
+                \underline{ADVISORY COMMITTEE} \\[3mm]
+                \noindent \rule{3.1in}{0.1mm} \\[-1.3mm]
+                % for master thesis, change Chairman to Advisor
+                {\thesischairadvisor}, Chairman \hfill{Date} \\[2mm]
+                {\noindent \rule{3.1in}{0.1mm}} \\[-1.3mm]
+                % for master thesis, add Reader after committeenameA
+                {\committeenameA} \hfill{Date} \\[2mm]
+                % for master thesis, remove / comment out the following six lines
+                {\noindent \rule{3.1in}{0.1mm}} \\[-1.3mm]
+                {\committeenameB} \hfill{Date} \\[2mm]
+                {\noindent \rule{3.1in}{0.1mm}} \\[-1.3mm]
+                {\committeenameC} \hfill{Date} \\[2mm]
+                {\noindent \rule{3.1in}{0.1mm}} \\[-1.3mm]
+                {\committeenameD} \hfill{Date}      % removed \\
+            \end{spacing}
+        \end{minipage}
+        % \vfill \strut                  6/2009 - changed the following two lines
+        \vspace{35mm}       % was \vspace{35mm} (use 30mm for titles with two lines)
+        \strut
+        \begin{spacing}{1}
+            \MakeUppercase{Stevens Institute of Technology} \\
+            Castle Point on Hudson \\
+            Hoboken, NJ 07030 \\
+            \thesisyear
+        \end{spacing}
+    \end{center}
+    % \vfill \strut
+    \newpage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%       Copyright Page 
+%
+%       The copyright page is optional.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\thesiscopyrightpage}{
+    \thispagestyle{empty}       % no page number on the copyright page
+    \strut \vfill
+    \vspace*{7.2in}
+    \begin{center}
+        \textcopyright \thesisyear, \thesisname. All rights reserved.
+    \end{center}
+    \vfill \strut
+    \newpage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%       Abstract
+%
+%       The abstract must be 350 words or less.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\thesisabstract}{
+    \begin{center}
+        \MakeUppercase{\thesistitle}
+
+        \vspace{12pt}
+        ABSTRACT
+        \vspace{12pt}
+    \end{center}
+    This dissertation proposes a novel financial market simulator that allows multiple automated traders and researchers to simultaneously connect to an exchange-like environment and asynchronously trade financial assets. Researchers and practitioners in industry and academia can use the simulator to implement, stress, and verify different trading strategies and stock market scenarios. Given a faithful implementation of relevant market mechanisms, we demonstrate how a simple set of automated agents can replicate real financial market characteristics. We also show how to create stress scenarios and analyze different factors contributing to market crash events. The developed laboratory environment allows for experiment isolation in realistic conditions, enabling testing and validation of new trading strategies, as well as verification of new regulation policies before implementation. To this end, we offer the first applied view of frequent batch auctions as an alternative order matching mechanism. Results present insights as a testing hypothesis analysis for deployment strategies in actual market exchanges.
+
+    \vspace{12pt}
+
+    % \\[6mm]
+    % make the author name flush left
+    \begin{flushleft}
+        Author: \thesisname \\
+        Advisor: \thesischairadvisor \\
+        Date: \thesisdate \\
+        Department: \thesisdepartment \\
+        Degree: \thesisdegree \\
+    \end{flushleft}
+    \newpage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%       Dedication Page
+%
+%       This section is optional.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\thesisdedicationpage}{
+    \strut \vspace{2in}
+    \begin{center}
+        To my wife, Vitória, \\
+        and to our son, Benjamin.
+    \end{center}
+    \vfill \strut
+    \newpage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%       Acknowledgments
+%
+%       This section is optional.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\thesisacknowledgments}{
+    \noindent \textbf{Acknowledgments} \\[6mm]
+    My Ph.D. studies and research would not be possible without the support, encouragement and dedication of many others.
+    
+    I would like to start by thanking my parents, Ary and Jaqueline, and my grandparents, who planted the seed of the importance of education in me since a young age. My sister, Marina, who was just 17 when she embarked to the other side of the world to study and subsequently work in Japan, is an inspiration to me.
+    
+    Thank you to my wife, Vitória, who took on coming to the U.S. with me without knowing what was reserved for her here, leaving her family and job behind. I'm very proud of the career you built here on your own. You are strong, dedicated, and the best wife and mother one could wish for. I would not be here without you. Our son, little Ben, is still too young to read this, but the joy he gives us everyday certainly helped a lot as well.
+    
+    Thank you to my in-laws, Roberto, Simone, Ian and Alice, whose love and support were always aplenty. We are in awe of the incredible grandparents you and my parents have become - always present, even from far away.
+    
+    These acknowledgments would not be complete if they did not include our ``American Family'': our friends Cesar, Danilo, Isabelle, Katherine, Pedro, Priscila, Raif, Rodrigo, and Sílvia. I believe I speak for my wife as well when I thank you for the many good moments which lightened up what could otherwise have been very lonely years. A special shout-out is also well deserved to my ``far away, but close'' friends, Gustavo and Martin.
+    
+    Of course, none of this work would be possible without the help and mentorship of my advisor, Prof. Florescu. You can be tough to work with, but you are incredibly smart, and, most importantly, you care. You are a very good instructor, and your students know they can count on you. I would also like to thank the members of my doctoral advisory committee, who, especially in the very end, showed incredible patience and support.
+    
+    Finally, the SHIFT project would not be possible without the contribution of several Stevens Institute of Technology students and researchers who participated in different stages of its development: especially Jinyu Zeng and Ziwen Ye, and also Chen Liu, Gaojie Li, Han Zheng, Hanrun Li, Isaac Cohen, Jian Zhao, Jiaxu Duan, Lalita Gajbe, Meng Zhi, Runxi Ding, Shaoyong Tang, Shiwei Zeng, Shuoyu Mao, Waris Bantherngpaesach, Weipu Xu, Xiaojian Zhu, Xiaoshuai Luo, Xuan Luo, Xuming Bing, Yang Liu, Yongxin Feng, Yuan Tian, Yuewei Mao, Zhanyu Tan, Zhenjiu Dai.
+    \vfill \strut
+    \newpage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%       Vita
+%
+%       This section is for dissertations only.
+%       Not required for masters thesis.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\thesisvita}{
+    \newpage
+
+    \noindent \textbf{Vita}
+    \vspace{12pt}
+    % Insert Vita information below.
+    % The format of the vita is up to the individual.
+    % Some people include photos or personal information such as marital status, birth place or include publications.
+    % There is no set format for the vita, so reformat this part as you wish.
+    \begin{center}
+        \textbf{\thesisname}
+    \end{center}
+    \begin{spacing}{1}
+        \begin{tabbing}
+
+            \textbf{Address} \hspace{20mm} \= Jersey City, NJ 07310\= \\[3mm]
+            \textbf{Place of birth} \> Caxias do Sul, Brazil \\[3mm]
+            \textbf{Date of birth} \> August 3, 1987 \\[3mm]
+
+            \textbf{Education} \> Stevens Institute of Technology, Hoboken, NJ \\
+            \> Doctoral Candidate in Financial Engineering \\
+            \> expected date of graduation, August 2020 \\[3mm]
+
+            \> Fundanção Getulio Vargas, São Paulo, Brazil \\
+            \> Master of Science in Quantitative Finance \\
+            \> August 2014 \\[3mm]
+
+            \> UFRGS, Porto Alegre, Brazil \\
+            \> Bachelor of Science in Computer Science \\
+            \> July 2010 \\[3mm]
+
+            \> Technische Universität Berlin, Berlin, Germany \\
+            \> Bachelor of Science Exchange Year in Computer Science \\
+            \> July 2009 \\[3mm]
+
+            \textbf{Industrial} \> Interactive Brokers, Greenwich, CT \\
+            \textbf{Experience} \> Software Engineer (June 2020 - present) \\
+            \> Software Development Department \\[3mm]
+            
+            \> Stevens Institute of Technology, Hoboken, NJ \\
+            \> Lead Developer (January 2017 - May 2020) \\
+            \> SHIFT Research Project \\[3mm]
+
+            \> Stevens Institute of Technology, Hoboken, NJ \\
+            \> Adjunct Professor (August 2017 - May 2020) \\
+            \> C++ Programming in Finance \\[3mm]
+            
+            \> Itaú Unibanco, São Paulo, Brazil \\
+            \> Quantitative Developer (June 2012 - October 2014) \\
+            \> Market Risk Modeling Department \\[3mm]
+
+            \> Itaú Unibanco, São Paulo, Brazil \\
+            \> Systems Analyst (May 2011 - May 2012) \\
+            \> Information Technology Department \\[6mm]
+
+            \textbf{Publications} \> Alves, T. W., I. Florescu, and D. Bozdog. (2020). \\
+            \> Insights on the Statistics \\
+            \> and Market Behavior of Frequent Batch Auctions. \\
+            \> To be submitted. \\[3mm]
+            
+            \> Alves, T. W., I. Florescu, G. Calhoun, and D. Bozdog. (2020). \\
+            \> SHIFT: \\
+            \> A Highly Realistic Financial Market Simulation Platform. \\
+            \> \emph{6th International Symposium in Computational Economics} \\
+            \> \emph{and Finance. arXiv:2002.11158 [q-fin].} \\[3mm]
+
+            \> Florescu, I. and T. W. Alves. (2019). \\
+            \> Experimenting with a Market Exchange Replica. \\
+            \> \emph{Eastern Economics Association Conference.} \\[3mm]
+            
+            \> Florescu, I., T. W. Alves, and Z. Ye. (2017). \\
+            \> Algorithmic trading / Machine learning in finance: \\
+            \> Assessing the algorithms’ interaction and \\
+            \> impact of regulations. \\
+            \> \emph{The Eastern Conference on Mathematical Finance.} \\[3mm]
+
+            \textbf{Honors} \> Ph.D. Research Grant \\
+            \> CNPq, Brazil, 01/2015 - 12/2019 \\[3mm]
+            
+            \> Master’s Degree Studies Scholarship \\
+            \> Itaú Unibanco, Brazil, 08/2012 - 08/2014 \\[3mm]
+            
+            \> Exchange Undergraduate Studies Scholarship \\
+            \> Capes, Brazil and DAAD, Germany, 09/2008 - 07/2009 \\[3mm]
+
+
+        \end{tabbing}
+    \end{spacing}
+
+    \vfill \strut
+    \newpage}
